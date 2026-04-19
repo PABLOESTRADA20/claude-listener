@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.wav
+*.mp3
+*.tmp
+.env
+venv/
+.venv/
+sessions/
+*.log
