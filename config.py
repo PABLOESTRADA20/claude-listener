@@ -24,8 +24,8 @@ class Config:
     silence_duration: float = 1.5  # seconds of silence to stop recording
 
     # Whisper settings
-    whisper_model: str = "tiny"  # tiny, base, small, medium
-    whisper_language: str = "en"
+    whisper_model: str = "small"# tiny, base, small, medium
+    whisper_language: str = "es"
 
     # Ollama settings (local LLM for classification)
     ollama_model: str = "qwen2.5:3b"  # small, fast, good at classification
@@ -40,7 +40,7 @@ class Config:
 
     # TTS settings
     tts_enabled: bool = True
-    tts_voice: str = "en-US-GuyNeural"
+    tts_voice: str = "es-MX-JorgeNeural"
     tts_rate: str = "+15%"
 
     # Feedback

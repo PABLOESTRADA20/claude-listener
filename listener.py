@@ -59,11 +59,14 @@ def check_dependencies():
     except FileNotFoundError:
         missing.append("ollama (https://ollama.ai)")
 
-    # Check claude
+# Check claude
     try:
         subprocess.run(["claude", "--version"], capture_output=True, timeout=5)
     except FileNotFoundError:
-        missing.append("claude CLI (npm install -g @anthropic-ai/claude-code)")
+        try:
+            subprocess.run(["claude.cmd", "--version"], capture_output=True, timeout=5)
+        except FileNotFoundError:
+            missing.append("claude CLI (npm install -g @anthropic-ai/claude-code)")
 
     return missing
 
